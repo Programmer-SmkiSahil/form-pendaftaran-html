@@ -1,107 +1,199 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
+    <meta charset="UTF-8">
     <title>Form Pendaftaran Siswa Baru</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        p {
+            text-align: center;
+            color: #555;
+        }
+
+        img {
+            display: block;
+            margin: 20px auto;
+            width: 150px;
+        }
+
+        fieldset {
+            border: none;
+            margin-top: 20px;
+        }
+
+        legend {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        td {
+            padding: 10px;
+            vertical-align: top;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="date"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        button {
+            background-color: #2c3e50;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #34495e;
+        }
+
+        audio {
+            margin-top: 15px;
+        }
+
+        marquee {
+            background-color: #2980b9;
+            color: white;
+            padding: 10px;
+            font-weight: bold;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .jurusan-section {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .jurusan-section h2 {
+            color: #2c3e50;
+        }
+
+        .jurusan-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        .jurusan-table th,
+        .jurusan-table td {
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        .jurusan-table th {
+            background-color: #ecf0f1;
+        }
+    </style>
 </head>
 <body>
-    <!-- Judul Halaman -->
+
+<div class="container">
+    <h1>Formulir Pendaftaran Siswa Baru</h1>
+    <img src="logo.png" alt="Logo Sekolah">
+    <p>Silakan isi formulir di bawah ini dengan data yang benar dan lengkap.</p>
+
+    <form action="#" method="post">
+        <fieldset>
+            <legend>Data Siswa</legend>
+            <table>
+                <tr>
+                    <td>Nama Lengkap</td>
+                    <td><input type="text" name="nama" required></td>
+                </tr>
+                <tr>
+                    <td>NISN</td>
+                    <td><input type="number" name="nisn" required></td>
+                </tr>
+                <tr>
+                    <td>Jenis Kelamin</td>
+                    <td>
+                        <input type="radio" name="jk" value="Laki-laki" required> Laki-laki
+                        <input type="radio" name="jk" value="Perempuan" required> Perempuan
+                    </td>
+                </tr>
+                <tr>
+                    <td>Tanggal Lahir</td>
+                    <td><input type="date" name="tgl_lahir" required></td>
+                </tr>
+                <tr>
+                    <td>Jurusan</td>
+                    <td>
+                        <select name="jurusan" required>
+                            <option value="RPL">RPL</option>
+                            <option value="TKJ">TKJ</option>
+                            <option value="MM">MM</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Alamat</td>
+                    <td><textarea name="alamat" rows="3" required></textarea></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <button type="submit">DAFTAR</button>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+
     <center>
-        <font size="6"><b>Formulir Pendaftaran Siswa Baru</b></font>
-    </center>
-
-    <!-- Gambar Logo -->
-    <br>
-    <center>
-        <img src="logo.png" alt="Logo Sekolah" width="200">
-    </center>
-
-    <!-- Paragraf Pendahuluan -->
-    <br>
-    <center>
-        <p>Silakan isi formulir di bawah ini dengan data yang benar dan lengkap.</p>
-    </center>
-
-    <hr>
-
-    <!-- Formulir Pendaftaran -->
-    <center>
-        <form action="#" method="post">
-            <fieldset>
-                <legend><b>Data Siswa</b></legend>
-                <table cellpadding="5">
-                    <tr>
-                        <td>Nama Lengkap</td>
-                        <td>:</td>
-                        <td><input type="text" name="nama" required></td>
-                    </tr>
-                    <tr>
-                        <td>NISN</td>
-                        <td>:</td>
-                        <td><input type="number" name="nisn" required></td>
-                    </tr>
-                    <tr>
-                        <td>Jenis Kelamin</td>
-                        <td>:</td>
-                        <td>
-                            <input type="radio" name="jk" value="Laki-laki"> Laki-laki
-                            <input type="radio" name="jk" value="Perempuan"> Perempuan
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Tanggal Lahir</td>
-                        <td>:</td>
-                        <td><input type="date" name="tgl_lahir" required></td>
-                    </tr>
-                    <tr>
-                        <td>Jurusan</td>
-                        <td>:</td>
-                        <td>
-                            <select name="jurusan">
-                                <option value="RPL">RPL</option>
-                                <option value="TKJ">TKJ</option>
-                                <option value="MM">MM</option>
-                            </select>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Alamat</td>
-                        <td>:</td>
-                        <td><textarea name="alamat" rows="3" cols="30"></textarea></td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <button type="submit">Daftar</button>
-                        </td>
-                    </tr>
-                </table>
-            </fieldset>
-        </form>
-    </center>
-
-    <hr>
-
-    <!-- Audio -->
-    <center>
-        <p><b>Putar audio informasi berikut:</b></p>
+        <p><strong>Putar audio informasi berikut:</strong></p>
         <audio controls>
             <source src="bel.mp3" type="audio/mpeg">
             Browser Anda tidak mendukung pemutar audio.
         </audio>
     </center>
 
-    <hr>
-
-    <!-- Marquee Bonus -->
     <marquee behavior="scroll" direction="left">
         Selamat datang di halaman pendaftaran siswa baru SMK RPL!
     </marquee>
 
-    <!-- Tabel Bonus -->
-    <br>
-    <center>
-        <font size="4"><b>Daftar Jurusan</b></font><br><br>
-        <table border="1" cellpadding="5" cellspacing="0">
-            <tr bgcolor="#add8e6">
+    <div class="jurusan-section">
+        <h2>Daftar Jurusan</h2>
+        <table class="jurusan-table">
+            <tr>
                 <th>No</th>
                 <th>Jurusan</th>
                 <th>Keterangan</th>
@@ -122,7 +214,8 @@
                 <td>Multimedia</td>
             </tr>
         </table>
-    </center>
+    </div>
+</div>
 
 </body>
 </html>

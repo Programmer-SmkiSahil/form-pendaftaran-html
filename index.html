@@ -1,221 +1,255 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <title>Form Pendaftaran Siswa Baru</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', sans-serif;
-            background-color: #f4f6f8;
-            margin: 0;
-            padding: 20px;
-        }
+  <meta charset="UTF-8">
+  <title>Form Pendaftaran Siswa Baru</title>
+  <style>
+    :root {
+      --primary: #ff5722;
+      --background: #f4f4f4;
+      --border: #000;
+      --text: #111;
+    }
 
-        .container {
-            max-width: 700px;
-            margin: auto;
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-        }
+    * {
+      box-sizing: border-box;
+    }
 
-        h1 {
-            text-align: center;
-            color: #2c3e50;
-        }
+    body {
+      margin: 0;
+      padding: 40px 20px;
+      font-family: 'Arial Black', sans-serif;
+      background-color: var(--background);
+      color: var(--text);
+    }
 
-        p {
-            text-align: center;
-            color: #555;
-        }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 30px;
+      background: #fff;
+      border: 4px solid var(--border);
+      box-shadow: 8px 8px 0 var(--border);
+    }
 
-        img {
-            display: block;
-            margin: 20px auto;
-            width: 150px;
-        }
+    h1 {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
 
-        fieldset {
-            border: none;
-            margin-top: 20px;
-        }
+    img {
+      display: block;
+      margin: 0 auto 20px auto;
+      width: 180px;
+      border: 4px solid var(--border);
+      box-shadow: 6px 6px 0 var(--border);
+    }
 
-        legend {
-            font-size: 1.2em;
-            font-weight: bold;
-            margin-bottom: 10px;
-            color: #333;
-        }
+    p {
+      text-align: center;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
 
-        table {
-            width: 100%;
-        }
+    fieldset {
+      border: 3px solid var(--border);
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 6px 6px 0 var(--border);
+    }
 
-        td {
-            padding: 10px;
-            vertical-align: top;
-        }
+    legend {
+      font-size: 18px;
+      font-weight: bold;
+      background: var(--primary);
+      color: #fff;
+      padding: 6px 12px;
+      border: 2px solid var(--border);
+      box-shadow: 4px 4px 0 var(--border);
+    }
 
-        input[type="text"],
-        input[type="number"],
-        input[type="date"],
-        select,
-        textarea {
-            width: 100%;
-            padding: 8px 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
 
-        input[type="radio"] {
-            margin-right: 5px;
-        }
+    td {
+      padding: 10px;
+      vertical-align: top;
+    }
 
-        button {
-            background-color: #2c3e50;
-            color: white;
-            border: none;
-            padding: 12px 25px;
-            font-size: 1em;
-            border-radius: 5px;
-            cursor: pointer;
-        }
+    input[type="text"],
+    input[type="number"],
+    input[type="date"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 3px solid var(--border);
+      background-color: #fff;
+      font-family: inherit;
+      box-shadow: 4px 4px 0 var(--border);
+    }
 
-        button:hover {
-            background-color: #34495e;
-        }
+    input[type="radio"] {
+      margin-right: 5px;
+    }
 
-        audio {
-            margin-top: 15px;
-        }
+    button {
+      background-color: var(--primary);
+      color: white;
+      font-weight: bold;
+      padding: 12px 25px;
+      border: 3px solid var(--border);
+      cursor: pointer;
+      font-family: inherit;
+      box-shadow: 6px 6px 0 var(--border);
+      transition: all 0.1s ease-in-out;
+    }
 
-        marquee {
-            background-color: #2980b9;
-            color: white;
-            padding: 10px;
-            font-weight: bold;
-            border-radius: 5px;
-            margin-top: 20px;
-        }
+    button:hover {
+      transform: translate(2px, 2px);
+      box-shadow: 2px 2px 0 var(--border);
+    }
 
-        .jurusan-section {
-            margin-top: 30px;
-            text-align: center;
-        }
+    audio {
+      margin-top: 20px;
+      border: 3px solid var(--border);
+      box-shadow: 4px 4px 0 var(--border);
+    }
 
-        .jurusan-section h2 {
-            color: #2c3e50;
-        }
+    marquee {
+      margin-top: 30px;
+      padding: 12px;
+      font-weight: bold;
+      background-color: var(--primary);
+      color: white;
+      border: 3px solid var(--border);
+      box-shadow: 4px 4px 0 var(--border);
+    }
 
-        .jurusan-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 10px;
-        }
+    .jurusan-section {
+      margin-top: 30px;
+      text-align: center;
+    }
 
-        .jurusan-table th,
-        .jurusan-table td {
-            border: 1px solid #ccc;
-            padding: 10px;
-        }
+    .jurusan-section h2 {
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
 
-        .jurusan-table th {
-            background-color: #ecf0f1;
-        }
-    </style>
+    .jurusan-table {
+      width: 100%;
+      border-collapse: collapse;
+      border: 3px solid var(--border);
+      box-shadow: 6px 6px 0 var(--border);
+    }
+
+    .jurusan-table th,
+    .jurusan-table td {
+      padding: 10px;
+      border: 2px solid var(--border);
+      background-color: #fff;
+    }
+
+    .jurusan-table th {
+      background-color: #fdd835;
+    }
+  </style>
 </head>
 <body>
 
-<div class="container">
+  <div class="container">
     <h1>Formulir Pendaftaran Siswa Baru</h1>
     <img src="logo.png" alt="Logo Sekolah">
     <p>Silakan isi formulir di bawah ini dengan data yang benar dan lengkap.</p>
 
     <form action="#" method="post">
-        <fieldset>
-            <legend>Data Siswa</legend>
-            <table>
-                <tr>
-                    <td>Nama Lengkap</td>
-                    <td><input type="text" name="nama" required></td>
-                </tr>
-                <tr>
-                    <td>NISN</td>
-                    <td><input type="number" name="nisn" required></td>
-                </tr>
-                <tr>
-                    <td>Jenis Kelamin</td>
-                    <td>
-                        <input type="radio" name="jk" value="Laki-laki" required> Laki-laki
-                        <input type="radio" name="jk" value="Perempuan" required> Perempuan
-                    </td>
-                </tr>
-                <tr>
-                    <td>Tanggal Lahir</td>
-                    <td><input type="date" name="tgl_lahir" required></td>
-                </tr>
-                <tr>
-                    <td>Jurusan</td>
-                    <td>
-                        <select name="jurusan" required>
-                            <option value="RPL">RPL</option>
-                            <option value="TKJ">TKJ</option>
-                            <option value="MM">MM</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Alamat</td>
-                    <td><textarea name="alamat" rows="3" required></textarea></td>
-                </tr>
-                <tr>
-                    <td colspan="2" style="text-align: center;">
-                        <button type="submit">DAFTAR</button>
-                    </td>
-                </tr>
-            </table>
-        </fieldset>
+      <fieldset>
+        <legend>Data Siswa</legend>
+        <table>
+          <tr>
+            <td>Nama Lengkap</td>
+            <td><input type="text" name="nama" required></td>
+          </tr>
+          <tr>
+            <td>NISN</td>
+            <td><input type="number" name="nisn" required></td>
+          </tr>
+          <tr>
+            <td>Jenis Kelamin</td>
+            <td>
+              <label><input type="radio" name="jk" value="Laki-laki" required> Laki-laki</label>
+              <label><input type="radio" name="jk" value="Perempuan" required> Perempuan</label>
+            </td>
+          </tr>
+          <tr>
+            <td>Tanggal Lahir</td>
+            <td><input type="date" name="tgl_lahir" required></td>
+          </tr>
+          <tr>
+            <td>Jurusan</td>
+            <td>
+              <select name="jurusan" required>
+                <option value="RPL">RPL</option>
+                <option value="TKJ">TKJ</option>
+                <option value="MM">MM</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>Alamat</td>
+            <td><textarea name="alamat" rows="3" required></textarea></td>
+          </tr>
+          <tr>
+            <td colspan="2" style="text-align: center;">
+              <button type="submit">DAFTAR</button>
+            </td>
+          </tr>
+        </table>
+      </fieldset>
     </form>
 
     <center>
-        <p><strong>Putar audio informasi berikut:</strong></p>
-        <audio controls>
-            <source src="bel.mp3" type="audio/mpeg">
-            Browser Anda tidak mendukung pemutar audio.
-        </audio>
+      <p><strong>Putar audio informasi berikut:</strong></p>
+      <audio controls>
+        <source src="bel.mp3" type="audio/mpeg">
+        Browser Anda tidak mendukung pemutar audio.
+      </audio>
     </center>
 
     <marquee behavior="scroll" direction="left">
-        Selamat datang di halaman pendaftaran siswa baru SMK RPL!
+      Selamat datang di halaman pendaftaran siswa baru SMK RPL!
     </marquee>
 
     <div class="jurusan-section">
-        <h2>Daftar Jurusan</h2>
-        <table class="jurusan-table">
-            <tr>
-                <th>No</th>
-                <th>Jurusan</th>
-                <th>Keterangan</th>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>RPL</td>
-                <td>Rekayasa Perangkat Lunak</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>TKJ</td>
-                <td>Teknik Komputer dan Jaringan</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>MM</td>
-                <td>Multimedia</td>
-            </tr>
-        </table>
+      <h2>Daftar Jurusan</h2>
+      <table class="jurusan-table">
+        <tr>
+          <th>No</th>
+          <th>Jurusan</th>
+          <th>Keterangan</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>RPL</td>
+          <td>Rekayasa Perangkat Lunak</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>TKJ</td>
+          <td>Teknik Komputer dan Jaringan</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>MM</td>
+          <td>Multimedia</td>
+        </tr>
+      </table>
     </div>
-</div>
+  </div>
 
 </body>
 </html>

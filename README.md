@@ -9,6 +9,6 @@ Klik untuk melihat hasil masing-masing:
 - 📁 [Reyy Nn](https://rey2305.github.io/loginsahil/)
 - 📁 [Im-Ran](https://ran200110.github.io/form/)
 - 📁 [Rojaditya](https://rojaditya505.github.io/form2/)
-- 📁 [Rojaditya](https://ghiizxc-046.github.io/form/)
+- 📁 [Ghiizxc-far](https://ghiizxc-046.github.io/form/)
 
 > Semua link langsung ke Github Pages.
